@@ -34,7 +34,4 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9
 PRODUCT_MANUFACTURER := Xiaomi
 
-# Include firmware
-$(call inherit-product, vendor/xiaomi-firmware/cepheus/firmware.mk)
-
 TARGET_SUPPORTS_QUICK_TAP := true
