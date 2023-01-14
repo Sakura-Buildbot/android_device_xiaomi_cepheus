@@ -1,6 +1,5 @@
 type init-insmod-sh, domain;
 type init-insmod-sh_exec, exec_type, vendor_file_type, file_type;
-type vendor_debugfs_wlan, sysfs_type, fs_type;
 
 init_daemon_domain(init-insmod-sh)
 
