@@ -101,30 +101,12 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_cepheus
 TARGET_RECOVERY_DEVICE_MODULES := libinit_cepheus
 
 # Kernel
-BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_IMAGE_NAME := Image-dtb
-BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_SEPARATED_DTBO := true
-BOARD_RAMDISK_USE_LZ4 := true
-BOARD_KERNEL_TAGS_OFFSET := 0x00000100
-BOARD_RAMDISK_OFFSET := 0x01000000
-
-TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := cepheus_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/cepheus
-KERNEL_SUPPORTS_LLVM_TOOLS := true
-TARGET_KERNEL_ADDITIONAL_FLAGS := AS=llvm-as AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip LD=ld.lld
-TARGET_KERNEL_ADDITIONAL_FLAGS += \
-    HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
-
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xa90000
-BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom androidboot.console=ttyMSM0
-BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
+TARGET_KERNEL_HEADERS := kernel/xiaomi/cepheus
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_FORCE_PREBUILT_KERNEL := true
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-BOARD_KERNEL_CMDLINE += service_locator.enable=1
-BOARD_KERNEL_CMDLINE += loop.max_part=7
-BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
-BOARD_KERNEL_CMDLINE += kpti=off
 
 # Media
 TARGET_USES_ION := true
