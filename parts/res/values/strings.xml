@@ -37,7 +37,28 @@
     <!-- Ambient settings -->
     <string name="ambient_enable">Use ambient display</string>
     <string name="ambient_display_title">Ambient display</string>
+    <string name="ambient_display_always_on_title">Always on</string>
+    <string name="ambient_display_always_on_summary">Show time, notification icons, and other info. Increased battery usage.</string>
 
+    <!-- Pickup sensor -->
+    <string name="pickup_sensor_title">Pickup sensor</string>
+	
+    <!-- Proximity sensor -->
+    <string name="proximity_sensor_title">Proximity sensor</string>
+
+    <!-- Hand wave gesture -->
+    <string name="hand_wave_gesture_title">Hand wave</string>
+    <string name="hand_wave_gesture_summary">Pulse notifications on hand wave</string>
+	
+    <!-- Pick-up gesture -->
+    <string name="pick_up_gesture_title">Pick-up</string>
+    <string name="pick_up_gesture_summary">Pulse notifications on pick-up</string>
+    <string name="pick_up_wake_gesture_summary">Wake device on pick-up</string>
+
+    <!-- Pocket gesture -->
+    <string name="pocket_gesture_title">Pocket</string>
+    <string name="pocket_gesture_summary">Pulse notifications on removal from pocket</string>
+	
     <!-- Doze brightness -->
     <string name="doze_brightness_title">Always on brightness</string>
     <string name="doze_brightness_summary">%s mode is enabled</string>
